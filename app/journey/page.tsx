@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JourneySection from "@/components/JourneySection";
+import { journey } from "@/content/journey";
 
 export default function Journey() {
   return (
@@ -7,48 +9,50 @@ export default function Journey() {
       <Navbar />
 
       <main>
-        <section>
-          <p>Learning • Building • Contributing</p>
+        {/* Introduction */}
+        <section className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium text-neutral-500">
+              Learning · Building · Contributing
+            </p>
 
-          <h1>My Journey</h1>
+            <h1 className="mt-4 text-5xl font-semibold tracking-tight">
+              My Journey
+            </h1>
 
-          <p>
-            A record of the experiences, projects and opportunities that have
-            shaped my growth as a developer.
-          </p>
+            <p className="mt-6 text-lg leading-8 text-neutral-600">
+              From learning the fundamentals of technology to building
+              AI-powered applications, contributing to communities and
+              participating in hackathons, this is a record of the
+              experiences that have shaped my growth.
+            </p>
+          </div>
         </section>
 
-        <section>
-          <h2>Education</h2>
-
-          <article>
-            <h3>B.E. Artificial Intelligence & Data Science</h3>
-            <p>Datta Meghe College of Engineering</p>
-          </article>
+        {/* Journey */}
+        <section className="border-y border-neutral-200 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-24">
+            <JourneySection items={journey} />
+          </div>
         </section>
 
-        <section>
-          <h2>Experience & Work</h2>
+        {/* Current Direction */}
+        <section className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium text-neutral-500">
+              What&apos;s next
+            </p>
 
-          <article>
-            <h3>AI Summer Internship — MirAI</h3>
-          </article>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+              Still learning. Still building.
+            </h2>
 
-          <article>
-            <h3>Google Student Ambassador — India</h3>
-          </article>
-
-          <article>
-            <h3>GirlScript Summer of Code</h3>
-          </article>
-
-          <article>
-            <h3>SHAIDS — Technical Team</h3>
-          </article>
-
-          <article>
-            <h3>Hackathons & Technical Events</h3>
-          </article>
+            <p className="mt-6 leading-7 text-neutral-600">
+              I&apos;m currently focused on becoming a stronger software
+              engineer while continuing to explore Generative AI, backend
+              development, full-stack systems and cybersecurity.
+            </p>
+          </div>
         </section>
       </main>
 
